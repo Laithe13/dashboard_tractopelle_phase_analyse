@@ -3,7 +3,7 @@ from streamlit_extras.switch_page_button import switch_page
 from styles import inject_css, inject_header  # Importer la fonction depuis styles.py
 
 
-# Beauté des ongles
+# Injection CSS
 inject_header()
 inject_css()
 
