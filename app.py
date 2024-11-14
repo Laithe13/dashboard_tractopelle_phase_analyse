@@ -8,7 +8,7 @@ inject_header()
 inject_css()
 
 # Titre de la page
-st.markdown("<h2>Bienvenue cher investisseurs</h2>", unsafe_allow_html=True)
+st.markdown("<h2>Bienvenue Ahmed</h2>", unsafe_allow_html=True)
 
 # Texte de bienvenue
 st.markdown("""
