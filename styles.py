@@ -6,7 +6,7 @@ def inject_css():
     <style>
      /* Ajuster la largeur du conteneur principal */
     .main .block-container {
-        max-width: 300px;  /* Ajuste cette valeur pour changer la largeur */
+        max-width: 1300px;  /* Ajuste cette valeur pour changer la largeur */
         padding-left: 1rem;  /* Réduit la marge à gauche */
         padding-right: 1rem;  /* Réduit la marge à droite */
     }
