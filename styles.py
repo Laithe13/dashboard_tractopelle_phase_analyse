@@ -4,6 +4,7 @@ import base64
 def inject_css():
     css = """
     <style>
+    .css-18e3th9 { padding: 10px 10px; }
      /* Ajuster la largeur du conteneur principal */
     .main .block-container {
         max-width: 1300px;  /* Ajuste cette valeur pour changer la largeur */
