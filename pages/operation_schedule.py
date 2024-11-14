@@ -7,31 +7,28 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import math
 from datetime import datetime, timedelta
-import locale
+from babel.dates import format_date
 
-# vecteur nombre de jour dans chaque mois de 2025
+# Vecteur du nombre de jours dans chaque mois de 2025
 jours_par_mois_2025 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-# Vecteur depense, chiffre d'affaire et benefice pour chaque jour de l'année
+# Vecteur des dépenses, chiffre d'affaires et bénéfice pour chaque jour de l'année
 depenses_vecteur = np.zeros(365)  
 chiffre_affaire_vecteur = np.zeros(365)  
 benefice_vecteur = np.zeros(365)  
 
-#Encodage jour type pannes vecteur : 0 journee normal; 1 panne 1; 2 panne 2 ect
+# Encodage du jour type pour les pannes : 0 journée normale; 1 panne 1; 2 panne 2, etc.
 jour_type_pannes_vecteur = np.zeros(365)  
-
-# Définir la date de début
-start_date = datetime(2025, 1, 1)
-locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
 
 # Définir la date de début
 date_de_debut = datetime(2025, 1, 1)
 
-# Créer une liste des jours de la semaine pour chaque jour de 2025
+# Créer une liste des jours de la semaine en français pour chaque jour de 2025
 liste_jours_2025 = []
 for i in range(365):
     date_actuelle = date_de_debut + timedelta(days=i)
-    liste_jours_2025.append(date_actuelle.strftime('%A'))
+    jour_semaine = format_date(date_actuelle, 'EEEE', locale='fr_FR')
+    liste_jours_2025.append(jour_semaine)
 
 # Données d'entrée utilisateur
 st.sidebar.header("Caisse de départ")
